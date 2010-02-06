@@ -1,11 +1,21 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Apache2-Dispatch
-version:      0.10_02
-version_from: 
-installdirs:  site
+--- #YAML:1.0
+name:               Apache2-Dispatch
+version:            0.13
+abstract:           call PerlHandlers with the ease of Registry scripts
+author:  []
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    mod_perl2:                     1.99023
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+    mod_perl2:  2.000005
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.56
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

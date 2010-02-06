@@ -1,7 +1,31 @@
 Revision history for Perl extension Apache::Dispatch
 
+0.13 02.06.2010 13:08 PST
+  - require Apache::Bootstrap 0.07 to install on mp1/mp2 properly
+  - fix some of the Makefile.PL logic so that mp2 is checked first
+
+0.12 04.25.2009 16:06 PST
+  - set library versions to $Apache::Dispatch::Util::VERSION so PAUSE
+	can index them correctly
+
+0.11 04.25.2009 14:32 PST
+  - remove t/TEST.PL (it is not needed)
+  - put version in Apache::Dispatch::Util to avoid issue with Apache2::Module
+  - document PerlLoadModule for Dispatch* directives - ideysus@annocpan
+  - reduce unnecessary log verbosity
+  - use Apache::Bootstrap to bootstrap mod_perl version
+
+0.10 01.08.2008
+  - steal the RELEASE doc from Apache::Reload and adapt it - fred
+  - steal the Makefile.PL from A::R, and merge it with our needed custom
+    config directive generation, it detects the version more reliably - fred
+
+0.10_03 12.14.2007
+  - use the :withtestmore feature correctly - fred, thanks to geoff for the spot
+  - use like() instead of ok( $foo =~ m/bar/ ) - fred
+
 0.10_02  07.19.2007
-  - fix the unadvertised feature which allows handling <Location />
+  - fix the unadvertised feature which allows handling <Location /> - fred
 
 0.10_01  10.23.2006
   - move common methods to Apache::Dispatch::Util and adjust @ISA for
